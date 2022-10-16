@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Seçiciler</title>
+    <style>
+        body{color: e}
+        .classSecici{color:crimson}
+        #idSecici{color: red}
+        #idSecici span {border-bottom: 1px solid silver; margin-bottom: 1rem;}
+        .brd{border: 1px solid; height: 40px}
+    </style>
+    
+
+</head>
+<body>
+    <h1>JS Seciciler</h1>
+    <p id="idSecici">
+        Javascript ile DOM(Document Object Model) üzerinden elementler üzerinde
+        hızlıca maniplasyon yapabilir. 
+        
+        <span>Bunun için document yani sayfa üzerindeki istediğimiz elementi seçmemiz yeterlidir.</span>
+    </p>
+    <p class="classSecici">
+        Javascript de sayfadaki elementlerin herhangi bir özelliği ile
+        elementi seçebiliriz. Id, name, class veya alt-üst ilişkili olduğu
+        bir element üzerinden.
+
+    </p>
+    <h2> Html Elementlerini ID ye Göre Seçme</h2>
+    <p id="mrbdny">
+        Merhaba
+    </p>
+    <p id="jsIdSeciciTest" class="brd">
+
+    </p>
+    <script>
+        const icerik= document.getElementById("mrbdny");
+        document.getElementById("jsIdSeciciTest").innerText="mrbdny id li element içeriği: "+ icerik.innerText;
+    </script>
+    <hr>
+    <h2>HTML Elementlerini Etiket adına(Tag name)'ye Göre Seçme</h2>
+    <div>div içeriği</div>
+    <div id="bosDiv" class="brd"></div>
+    <script>
+        const divim=document.getElementsByTagName("div"); // sayfadaki tüm div'leri seçtik.
+        var pler= document.getElementsByTagName("p");
+        document.getElementById("bosDiv").innerText="seçtiğiniz div elementinden gelen içerik: " + pler[3]
+        [0].innerText; // getElementsByTagName metodu sayfadaki kendisine verilen htmml element koduna sahip tüm elementleri seçer.
+        // ELEMENTLER DİZİ FORMATINDA GELİR VE BU DİZİDEN VERDİĞİMİZ İNDEXTEKİ DEĞERE SAHİP ELEMENTE DİVLER[0] KODUYLA ULAŞABİLİRİZ.
+
+    </script>
+
+    <h2> Html Elementlerini SINIF ADINA (CLASS NAME)'NA Göre Seçme</h2>
+    <p>
+        Sayfadaki elementleri sahip olduğu class adına göre seçmemizi sağlar.
+    </p>
+    <div id="sinifSeciciId" class="brd"></div>
+
+    <script>
+        var sinifSecici= document.getElementsByClassName("sinifSecici")// class değeri sinifSecici olan elementleri seçer (class kullanan birden çok element olabileceği için dizi formatında liste gelir).
+        document.getElementById("sinifSeciciId").innerText=sinifSecici[0].innerText;
+    </script>
+
+    <h2 class="sorguSecici">HTML Elementlerini Css Sorgusu Kullanarak Seçme</h2>
+
+    <p id="sorguSeciciId" class="brd"></p>
+    
+    <style>
+        h2.sorgySecici{
+            background-color: brown;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        var cssGoreSec = document.querySelectorAll("h2.sorguSecici")
+        document.getElementById("sorguSeciciId").innerHTML = cssGoreSec[0].innerHTML;
+    </script>
+    <hr>
+    <h2>Tek Eleman Seçimi</h2>
+    <p id="ilkElemanicerigi"></p>
+
+    <style>
+        #ilkElamanicerigi{background-color: red; color: white}
+    </style>
+
+    <script>
+        var ilkEleman= document.querySelector("p"); // sayfadaki ilk p elementini seç.
+        document.querySelector("#ilkElemanicerigi").innerHTML=ilkEleman.innerHTML; // sayfadaki 
+        // ilkElemanicergi id sine aship ilk elemanı seçip içine ilkEleman elementinin içindeki değeri aktardık
+    </script>
+
+    <hr>
+
+    <h2 id="olayBaslik">addEventListener Medou</h2>
+    <p id="olayDinleme" class="brd"></p>
+    <p>JS'de addEventListener Metodu ile sayfadaki olayları dinleyebiliriz</p>
+
+    <button>addEventListener Sil</button>
+    <script>
+        function ornekFunction(){
+            document.getElementById("olayDinleme").innerHTML = "addEventListener çalıştı!"
+        }
+        // addEventListener Ekleme
+        document.getAnimations("olayBaslik").addEventListener("click",ornekFunction)
+        //addEventListener Silme
+        // function removeHandler(){
+        //     document.getElementById("olayBaslik").removeEventListener("click",ornekFunction")
+        // }
+    </script>
+
+
+
+
+</body>
+</html>

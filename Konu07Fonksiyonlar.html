@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Fonksiyonlar</title>
+</head>
+<body>
+    <h1> JS Fonksiyonlar</h1>
+    <script>
+        //Fonksiyon Tanımlama
+        function FonksiyonAdi (parametre) {
+            console.log('Fonksiyona Gönderilen Değer : ', parametre );
+        }
+        //Fonksiyon Çağırma
+        FonksiyonAdi("JS ileFonksiyon çağırımı")
+        FonksiyonAdi("JS fonksiyon gönderdik.")
+        function ToplamaYap(sayi1,sayi2) {
+            console.log('Sayıların Toplamı:>> ', sayi1+sayi2);
+        }
+        ToplamaYap(10,8)
+        function RenkDeğistir(arkaplanrengi, yazirengi) {
+            document.bgColor=arkaplanrengi;
+            document.fgColor=yazirengi;
+            
+        }
+        // RenkDeğistir("Red","White")
+        var icgenislik=window.innerWidth;
+        var icyukseklik=window.innerHeight;
+        var disgenislik=window.outerWidth;
+        var disyukseklik=window.outerHeight;
+        document.write("<h3>Pencere iç Genişliği: "+ icgenislik+"</h3>");
+        document.write("<h3>Pencere iç Yükseklik: "+ icyukseklik+"</h3>");
+        document.write("<h3>Pencere dis Genişliği: "+ disgenislik+"</h3>");
+        document.write("<h3>Pencere dis Yükseklik: "+ disyukseklik+"</h3>");
+
+        if (icgenislik>505){
+            RenkDeğistir("Red","White")
+        }
+        
+    </script>
+</body>
+</html>

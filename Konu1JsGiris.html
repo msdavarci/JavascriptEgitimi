@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Giriş</title>
+</head>
+<body>
+    <h1>Javascript Eğitimi</h1>
+    <h2> Javascript Fron End Kütüphaneleri</h2>
+    <p>
+        Angular(Google), React(Facebook), Vuejs SPA(Singla page application)
+    </p>
+    <p>
+        Jquery: Javascirpt kodlarını daha pratik hale getirmek için.
+    </p>
+
+    <p>
+        Javascript kodları <script></script> tagları arasına yazıyoruz.
+    </p>
+
+    <h3> Javascript ile ekrana yazı yazdırma</h3>
+    <script>
+        document.writeln("Bu yazı js document.writeln ile yazıldı");
+        document.write("Bu yazı js document.write ile yazıldı");
+        console.log("console.log ile js uygulamalarımızda verileri kullanıcının görmediği konsol ekranına yazdırabiliriz");
+        // TypeScript : Js geliştirirken c# gibi veri tipi koruması sağlar
+        // Javascript ile değişken tanımlama
+        var urunAdi; var urunFiyati = 1490.90, kdv = 18;
+        urunAdi = "Monitör";
+        console.log('Ürün Adı : ', urunAdi);
+        console.log('Ürün Fiyatı : ', urunFiyati)
+        console.log('Ürün Kdv : ', kdv);
+        console.log('Meslek : ', meslek);
+        // Let ile değişken tanımlama
+        let isim; let soyisim; var meslek;
+        isim = "Ali";
+        soyisim = "Deniz";
+        meslek = "Yazılım Uzmanı"
+        console.log('Kullanıcı Bilgileri : ' + isim + ' ' + soyisim + ' Meslek : ' + meslek);
+
+        // Js Sabitler
+        // Değerinin değişmesini istemediğimiz verileri sabit ile tanımlarız.
+        const sabitDeger="Bu yazı sabittir değiştirilemez"
+        console.log(sabitDeger)
+
+    </script>
+</body>
+</html>

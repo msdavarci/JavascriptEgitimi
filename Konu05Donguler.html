@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>JS Döngüler</title>
+</head>
+<body>
+    <h1>JS Döngüler</h1>
+    <script>
+       // For Döngüsü
+       for (let index = 0; index < 5; index++) {
+            console.log('index değeri : ', index)
+        }
+
+        // While Döngüsü
+        var i = 0, toplam = 0;
+        while (i < 5) {
+            toplam += i;
+            console.log('i nin değeri : ', i)
+            i++
+        }
+        console.log('While Toplam : ', toplam)
+
+        // Do .. While Döngüsü
+        var say, topl, ort;
+        say = 1;
+        topl = 0;
+
+        do {
+            topl = topl + say; // topl += in açık yazımı
+            console.log('say nin değeri : ', say)
+            say++
+        } while (say < 5);
+        console.log('Do While Toplam : ', topl)
+
+    </script>
+    
+</body>
+</html>
